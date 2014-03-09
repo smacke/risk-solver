@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"/>
+    <title>Stephen Macke: Risk Probability Calculator</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="risk.js"></script>
+    <script src="risk_page.js"></script>
+    <link rel="stylesheet" href="smacke.css"/>
+    <link rel="stylesheet" href="risk.css"/>
+  </head>
+
+  <body>
+
+<h1 class="header">Stephen Macke</h1>
+
+<div id="menubar">
+
+<table width="100%">
+<tr>
+<td><a href="index.html">HOME</a></td>
+<td><a href="resume.html">RESUME</a></td>
+<td><a href="programming.html">PROGRAMMING</a></td>
+<td><a href="http://projectscotland.blogspot.com">BLOG</a></td>
+</tr>
+</table>
+
+</div>
+
+<div id="leftcontent" style="width:35em">
+
+<ol id="steps">
+  <li>
+    <div class="step">
+      <h1>Attacking Force</h1>
+      Enter your starting army:
+      <input id="attackers" type="text" placeholder="10" />
+    </div>
+  </li>
+  <li style="display:none;">
+    <div class="step">
+      <h1>Defending Forces</h1>
+      Enter, in order and separated by commas, the sizes of the armies you plan to attack:
+      <input id="defenders" type="text" placeholder="1,2,5" />
+    </div>
+  </li>
+  <li style="display:none;">
+    <div class="step">
+      <h1>Fortifying Units</h1>
+      Enter the minimum number of units you wish to leave behind at each location (starting location + attacked locations).
+      You may leave this field blank, which defaults to 1 unit left behind at each location.
+      <input id="fortify" type="text" placeholder="" />
+    </div>
+  </li>
+  <li style="display:none;">
+    <div class="step">
+      <h1>Calculate</h1>
+      <p>Push the button to calculate the probability of success!</p>
+      <div id="answer"></div>
+      <div id="error"></div>
+      <span class="buttonclass" id="calc">Calculate Probability</span>
+    </div>
+  </li>
+</ol>
+
+<a href="risk.js">Source code.</a>
+
+</div>
+
+  </body>
+
+</html>
