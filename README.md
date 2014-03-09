@@ -11,4 +11,4 @@ conquered territory, the algorithm computes the probability of success. See
 License
 =======
 
-All code is BSD licensed.
+All code is released under the FreeBSD / simplified BSD license.
