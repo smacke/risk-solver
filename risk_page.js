@@ -7,6 +7,10 @@ $(function() {
         $('#error').html(err).show();
     }
 
+    function strip_spaces(str) {
+        return str.replace(/ /g, '');
+    }
+
     $('input').keydown(function() {
         var next = $(this).closest('li').next();
         next.show();
@@ -17,7 +21,7 @@ $(function() {
 
     $('#defenders').keyup(function() {
         var n_armies = 0;
-        var defenders = $('#defenders').val();
+        var defenders = strip_spaces($('#defenders').val());
         if (defenders) {
             n_armies = defenders.split(',').length;
         }
@@ -30,7 +34,7 @@ $(function() {
     
     $('#calc').click(function() {
         tour = {}
-        var attackers = $('#attackers').val();
+        var attackers = strip_spaces($('#attackers').val());
 
         if (!numpatt.test(attackers)) {
             //handle error
@@ -39,7 +43,7 @@ $(function() {
         }
         tour.attackers = parseInt(attackers);
 
-        var defenders = $('#defenders').val();
+        var defenders = strip_spaces($('#defenders').val());
         var darr = defenders.split(',');
 
         if (darr.length>30) {
@@ -59,7 +63,7 @@ $(function() {
 
         tour.defending_armies = darr;
 
-        var fortify = $('#fortify').val();
+        var fortify = strip_spaces($('#fortify').val());
 
         if (fortify) {
             var farr = fortify.split(',');
